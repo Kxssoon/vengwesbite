@@ -1,6 +1,6 @@
 // Set the date we're counting down to
 // Change this string to your sister's actual engagement date!
-const eventDate = new Date("August 24, 2024 18:00:00").getTime();
+const eventDate = new Date("January 31, 2026 18:30:00").getTime();
 
 // Update the count down every 1 second
 const x = setInterval(function() {

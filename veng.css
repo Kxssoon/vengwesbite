@@ -89,3 +89,198 @@ nav {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
+/* --- RSVP Contact Page Styles --- */
+
+.rsvp-section {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+.contact-container {
+    background: white;
+    padding: 50px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.rsvp-intro {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 30px auto;
+    width: 50%;
+}
+
+/* Contact Grid */
+.contact-methods {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Wraps to next line on small phone screens */
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.contact-person h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.contact-person p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Phone Number Links */
+.contact-link {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border: 1px solid #333;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: #333;
+    color: white;
+}
+
+/* Email Section */
+.email-section {
+    margin-top: 20px;
+}
+
+.email-link {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+
+.email-link:hover {
+    color: #555;
+    text-decoration: none;
+}
+
+/* --- Our Story / Timeline Styles --- */
+
+.story-header {
+    text-align: center;
+    padding: 60px 20px 20px;
+    background-color: #fff;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* The vertical line */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #333;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* Dots on the timeline */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: -8px;
+    background-color: white;
+    border: 2px solid #333;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Alternating sides */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 50%;
+}
+
+.timeline-item:nth-child(even)::after {
+    left: -7px;
+}
+
+.timeline-content {
+    padding: 20px;
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.date {
+    font-weight: bold;
+    color: #888;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Mobile Responsive Timeline */
+@media screen and (max-width: 600px) {
+    .timeline-container::after {
+        left: 31px;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        text-align: left !important;
+    }
+    
+    .timeline-item::after {
+        left: 23px;
+    }
+    
+    .timeline-item:nth-child(even) {
+        left: 0%;
+    }
+}
